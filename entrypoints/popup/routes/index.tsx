@@ -15,6 +15,10 @@ interface IndexPageProps {
 }
 
 function Index(props: IndexPageProps) {
+  /*
+  * TODO: Right now I have chrome.storage service, vut in future I want change it to indexeddb
+  *  without any hustle. Think about architecture and layers
+  *  */
   const tabService = new TabService();
   const storageService = new StorageService()
   const [tabs, setTabs] = createSignal<Tab[]>();
